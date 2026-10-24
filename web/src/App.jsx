@@ -4,6 +4,7 @@ import {
   CheckCircle2, Info, GitCommit, Clock, ArrowRight, ExternalLink 
 } from 'lucide-react';
 import { analyzeForensics } from './utils/forensics';
+import Background from './components/Background';
 import './App.css';
 
 function App() {
@@ -120,7 +121,9 @@ function App() {
     : [];
 
   return (
-    <div className="app-container">
+    <>
+      <Background />
+      <div className="app-container">
       {/* Header */}
       <header className="app-header">
         <div className="logo-container">
@@ -415,7 +418,8 @@ function App() {
 
         </div>
       )}
-    </div>
+      </div>
+    </>
   );
 }
 
